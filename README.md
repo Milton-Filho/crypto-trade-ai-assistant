@@ -2,9 +2,6 @@
 
 > Sistema pessoal de análise diária de Bitcoin para swing trade, movido a inteligência artificial (Gemini 2.0 Flash) e dados reais do mercado.
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" alt="Crypto Trade AI Banner" width="100%" />
-</div>
 
 ---
 
