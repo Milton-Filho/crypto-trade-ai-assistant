@@ -1,11 +1,11 @@
-# 🚀 Crypto Trade AI Assistant
+# Crypto Trade AI Assistant
 
 > Sistema pessoal de análise diária de Bitcoin para swing trade, movido a inteligência artificial (Gemini 2.0 Flash) e dados reais do mercado.
 
 
 ---
 
-## 💎 Identidade do Projecto
+## Identidade do Projecto
 O **Crypto Trade AI Assistant** é um sistema pessoal desenhado para remover o "ruído" do mercado e fornecer uma análise baseada em confluência técnica, on-chain e de sentimento. 
 
 - **Filosofia:** Cloud native, custo zero (free tiers), sem dados fictícios.
@@ -13,7 +13,7 @@ O **Crypto Trade AI Assistant** é um sistema pessoal desenhado para remover o "
 
 ---
 
-## 🧠 Como Funciona?
+## Como Funciona?
 
 O sistema opera através de dois processos principais (Jobs):
 
@@ -30,7 +30,7 @@ O sistema opera através de dois processos principais (Jobs):
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend:** Python 3.11 + FastAPI (Hospedado no **Render**)
 - **Frontend:** Next.js 14 App Router + Tailwind CSS (Hospedado na **Vercel**)
@@ -40,7 +40,7 @@ O sistema opera através de dois processos principais (Jobs):
 
 ---
 
-## 🚀 Como Executar Localmente
+## Como Executar Localmente
 
 ### Pré-requisitos
 - Node.js (Frontend)
@@ -98,4 +98,4 @@ O sistema utiliza pesos específicos para gerar confiança:
 Projeto para uso pessoal sob licença MIT. 
 
 ---
-*Construído com ❤️ por Milton Filho*
+*Construído por Milton Filho*
