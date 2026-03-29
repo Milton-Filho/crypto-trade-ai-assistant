@@ -1,5 +1,5 @@
 services:
-  # --- API Web Service ---
+  # --- API Web Service (Free Tier) ---
   - type: web
     name: crypto-trade-api
     env: python
@@ -8,31 +8,5 @@ services:
     rootDir: backend
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - fromGroup: crypto-trade-secrets
-
-  # --- Daily Analysis Job (01:00 UTC) ---
-  - type: cron
-    name: daily-analysis
-    env: python
-    region: frankfurt
-    plan: free
-    rootDir: backend
-    schedule: "0 1 * * *"
-    buildCommand: pip install -r requirements.txt
-    startCommand: python -m jobs.daily_job
-    envVars:
-      - fromGroup: crypto-trade-secrets
-
-  # --- Intraday Watcher (cada 2h, 07:00-23:00 UTC) ---
-  - type: cron
-    name: intraday-watcher
-    env: python
-    region: frankfurt
-    plan: free
-    rootDir: backend
-    schedule: "0 7,9,11,13,15,17,19,21,23 * * *"
-    buildCommand: pip install -r requirements.txt
-    startCommand: python -m jobs.watcher_job
     envVars:
       - fromGroup: crypto-trade-secrets
