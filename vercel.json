@@ -1,12 +1,4 @@
 {
-  "crons": [
-    {
-      "path": "/api/cron/daily",
-      "schedule": "0 1 * * *"
-    },
-    {
-      "path": "/api/cron/watcher",
-      "schedule": "0 */2 * * *"
-    }
-  ]
+  "cleanUrls": true,
+  "framework": "nextjs"
 }
