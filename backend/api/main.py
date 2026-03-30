@@ -37,15 +37,10 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# CORS — aceitar apenas domínios conhecidos
-origins = [
-    "http://localhost:3000",
-    app_settings.FRONTEND_URL,
-]
-
+# CORS — aceitar todas as origens na v1 para facilitar deploy com a Vercel
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
