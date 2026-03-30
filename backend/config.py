@@ -53,19 +53,24 @@ class Settings(BaseSettings):
         description="Chave da Google AI Studio"
     )
     GEMINI_MODEL: str = Field(
-        default="gemini-2.0-flash",
+        default="gemini-1.5-flash",
         description="Modelo Gemini a utilizar"
     )
 
     # --- Supabase ---
-    SUPABASE_URL: str = Field(
+    RAW_SUPABASE_URL: str = Field(
         default="",
+        alias="SUPABASE_URL",
         description="URL do projecto Supabase"
     )
     SUPABASE_SERVICE_KEY: str = Field(
         default="",
         description="Service role key do Supabase (nunca a anon key)"
     )
+
+    @property
+    def SUPABASE_URL(self) -> str:
+        return self.RAW_SUPABASE_URL.strip() if self.RAW_SUPABASE_URL else ""
 
     # --- Telegram ---
     TELEGRAM_BOT_TOKEN: str = Field(
@@ -109,7 +114,8 @@ class Settings(BaseSettings):
     @property
     def supabase_key(self) -> str:
         """Retorna a service key, priorizando SUPABASE_SERVICE_KEY."""
-        return self.SUPABASE_SERVICE_KEY or self.SUPABASE_SERVICE_ROLE_KEY
+        key = self.SUPABASE_SERVICE_KEY or self.SUPABASE_SERVICE_ROLE_KEY
+        return key.strip() if key else ""
 
     class Config:
         env_file = ".env"

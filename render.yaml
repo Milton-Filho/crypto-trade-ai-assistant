@@ -1,5 +1,5 @@
 services:
-  # --- API Web Service (Free Tier) ---
+  # --- API Web Service ---
   - type: web
     name: crypto-trade-api
     env: python
